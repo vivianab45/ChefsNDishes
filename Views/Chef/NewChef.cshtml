@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Chef Page";
+}
+
+@model Chef
+
+<div class= "mx-auto">
+    <div class="container d-flex justify-content-start">
+        <form asp-action="CreateChef" asp-controller="Chef" method="post">
+            <h1> Add a New Chef</h1>
+            <div class="row pt-2">
+                <div class="col">
+                    <label asp-for="FirstName"></label>
+                </div>
+                <div class="col">
+                    <input asp-for ="FirstName" class="form-control">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pt-2 ">
+                <div class="col">
+                    <label asp-for="LastName"></label>
+                </div>
+                <div class="col">
+                    <input asp-for ="LastName" class="form-control">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>                
+            </div>
+            <div class="row pt-2 ">
+                <div class="col">
+                    <label asp-for="DoB"></label>
+                </div>
+                <div class="col">
+                    <input asp-for ="DoB" class="form-control">
+                    <span asp-validation-for="DoB" class="text-danger"></span>
+                </div>                
+            </div>
+            <div class="pt-2">
+                <input type="submit" value="Submit" class="btn btn-primary float-end"> Submit</input>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
